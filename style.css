@@ -1,0 +1,62 @@
+html body{
+  margin-top: 30px;
+  background-color: #0B5B07;
+  color: white;
+}
+
+#main-container{
+  background-color: #084416;
+}
+
+.interface-element-background{
+  background-color: #134C09;
+  min-height: 40px !important;
+  border: 3px ridge white;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+
+header:hover{
+  cursor: pointer;
+  border-style: groove;
+  background-color: #114608;
+}
+
+#title{
+  font-family: 'Grand Hotel', cursive;
+  font-size: 60px;
+}
+
+#generate-btn{
+  background-color: #134C09;
+  min-height: 30px !important;
+  border: 3px ridge white;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+#generate-btn:hover{
+  cursor: pointer;
+  border-style: groove;
+  background-color: #114608;
+}
+
+#quote{
+  color: black;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.margin-10{
+  margin: 10px;
+}
+
+#author{
+  color: black;
+  font-weight: bolder;
+}
+
+#text-before-quote{
+
+}
