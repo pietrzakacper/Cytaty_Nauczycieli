@@ -16,7 +16,7 @@ $sqlQuery = "SELECT * FROM `quotes` WHERE 1";
 $numberOfQuotes =0;
 
 if($resultOfQuery = @$connection->query($sqlQuery)){
-  $numberOfQuotes = mysqli_num_rows($resultOfQuery);
+  $numberOfQuotes = $resultOfQuery->num_rows;
   if($numberOfQuotes > 0){
     $id=rand(1,$numberOfQuotes-1);
     $sqlQuery = sprintf("SELECT quotes.quote, teachers.imie, teachers.nazwisko FROM quotes, teachers WHERE quotes.id=%s AND teachers.id = quotes.teacherid", $id);

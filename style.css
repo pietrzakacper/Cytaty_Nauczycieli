@@ -60,3 +60,9 @@ header:hover{
 #text-before-quote{
 
 }
+
+#footer{
+  background-color: rgb(190, 190, 190) !important;
+  color: black;
+  margin-top: 30px;
+}
