@@ -24,7 +24,7 @@ if($resultOfQuery = @$connection->query($sqlQuery)){
     if($resultOfQuery = $connection->query($sqlQuery)){
       $row = $resultOfQuery->fetch_assoc();
       $quote = $row ['quote'];
-      $author= $row ['imie']." ".$row ['nazwisko'];
+      $author= $row ['imie']." ".$row ['nazwisko'].$_GET["zmienna"];
   }
 }
 }
