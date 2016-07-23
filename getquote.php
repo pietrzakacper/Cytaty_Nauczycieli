@@ -18,13 +18,13 @@ $numberOfQuotes =0;
 if($resultOfQuery = @$connection->query($sqlQuery)){
   $numberOfQuotes = $resultOfQuery->num_rows;
   if($numberOfQuotes > 0){
-    $id=rand(1,$numberOfQuotes);
-    $sqlQuery = sprintf("SELECT quotes.quote, teachers.imie, teachers.nazwisko FROM quotes, teachers WHERE quotes.id=%s AND teachers.id = quotes.teacherid", $id);
+    $id=rand(0,$numberOfQuotes-1);
+    $sqlQuery = sprintf("SELECT quotes.quote, teachers.imie, teachers.nazwisko FROM quotes, teachers WHERE teachers.id = quotes.teacherid LIMIT 1 OFFSET %d", $id);
     $resultOfQuery->free();
     if($resultOfQuery = $connection->query($sqlQuery)){
       $row = $resultOfQuery->fetch_assoc();
       $quote = $row ['quote'];
-      $author= $row ['imie']." ".$row ['nazwisko'].$_GET["zmienna"];
+      $author= $row ['imie']." ".$row ['nazwisko'];
   }
 }
 }
